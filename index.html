@@ -5,82 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les 10 Meilleurs Restaurants de Beaune</title>
     <style>
-        /* Styles précédents conservés */
+        /* Styles précédents conservés... */
         
-        .specialties {
-            margin-top: 15px;
+        .price-info {
+            background-color: #fff3e0;
             padding: 15px;
-            background-color: #f8f9fa;
             border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #ff9800;
         }
 
-        .specialties h3 {
+        .price-range {
+            font-weight: bold;
             color: #2c3e50;
-            margin-bottom: 10px;
-        }
-
-        .specialties ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .specialties li {
             margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
         }
 
-        .specialties li:before {
-            content: "•";
-            color: #4CAF50;
-            position: absolute;
-            left: 0;
-        }
-
-        .photos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .restaurant-photo {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.2s;
-        }
-
-        .restaurant-photo:hover {
-            transform: scale(1.05);
-        }
-
-        .reviews-section {
-            margin-top: 20px;
-        }
-
-        .review {
-            border-left: 4px solid #4CAF50;
-            margin-bottom: 15px;
-        }
-
-        .rating-details {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 10px;
+        .price-details {
+            font-size: 0.9em;
             color: #666;
         }
 
-        .cuisine-type {
-            display: inline-block;
-            background-color: #e9ecef;
-            padding: 5px 10px;
-            border-radius: 15px;
+        .menu-highlight {
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
             font-size: 0.9em;
-            color: #495057;
-            margin-top: 10px;
+        }
+
+        .price-indicator {
+            display: inline-flex;
+            align-items: center;
+            font-family: monospace;
+        }
+
+        .price-indicator span {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .price-indicator .inactive {
+            color: #ddd;
         }
     </style>
 </head>
@@ -88,53 +54,70 @@
     <div class="container">
         <h1>Les 10 Meilleurs Restaurants de Beaune</h1>
 
-        <!-- L'Ecusson -->
+        <!-- Caves Madeleine -->
         <div class="restaurant-card">
             <div class="restaurant-name">
-                L'Ecusson
-                <span class="rating">4.8 ★</span>
+                Caves Madeleine
+                <span class="rating">4.7 ★</span>
             </div>
-            <div class="cuisine-type">Gastronomie Française Contemporaine 🇫🇷</div>
-            <div class="address">2 Rue du Lieutenant Dupuis, 21200 Beaune</div>
+            <div class="cuisine-type">Cuisine Traditionnelle & Cave à Vins 🍷</div>
+            <div class="address">8 Rue du Faubourg Madeleine, 21200 Beaune</div>
+            
+            <div class="price-info">
+                <div class="price-range">
+                    <div class="price-indicator">
+                        Gamme de prix : <span>€€</span><span class="inactive">€€</span>
+                    </div>
+                </div>
+                <div class="price-details">
+                    <div class="menu-highlight">Menu Déjeuner : 29€ (entrée, plat, dessert)</div>
+                    <div class="menu-highlight">Menu Dégustation : environ 65-85€</div>
+                    <p>• Prix moyen à la carte : 45-60€ par personne</p>
+                    <p>• Vins : à partir de 35€ la bouteille</p>
+                </div>
+            </div>
+
             <div class="contact">
-                <p>📞 03 80 24 03 82</p>
-                <p>🌐 <a href="http://www.ecusson.fr/" target="_blank">www.ecusson.fr</a></p>
+                <p>📞 03 80 22 93 30</p>
+                <p>🌐 <a href="http://cavesmadeleine.com/" target="_blank">cavesmadeleine.com</a></p>
             </div>
             
             <div class="specialties">
-                <h3>Spécialités du Chef</h3>
+                <h3>Spécialités & Points Forts</h3>
                 <ul>
-                    <li>Menu Découverte avec options variées</li>
-                    <li>Cuisine gastronomique d'inspiration française</li>
-                    <li>Menu végétarien raffiné disponible</li>
+                    <li>Menu qui change selon les saisons</li>
                     <li>Carte des vins exceptionnelle</li>
+                    <li>Grande table commune pour une ambiance conviviale</li>
+                    <li>Terrasse agréable</li>
                 </ul>
             </div>
 
             <div class="photos-grid">
-                <img src="/api/placeholder/400/320" alt="Salle de restaurant L'Ecusson" class="restaurant-photo">
-                <img src="/api/placeholder/400/320" alt="Exemple de plat gastronomique" class="restaurant-photo">
-                <img src="/api/placeholder/400/320" alt="Présentation artistique" class="restaurant-photo">
+                <img src="/api/placeholder/400/320" alt="Terrasse Caves Madeleine" class="restaurant-photo">
+                <img src="/api/placeholder/400/320" alt="Cave à vins" class="restaurant-photo">
+                <img src="/api/placeholder/400/320" alt="Plat signature" class="restaurant-photo">
             </div>
 
             <div class="reviews-section">
                 <div class="review">
-                    "L'Ecusson était le meilleur restaurant que nous ayons fréquenté pendant notre court séjour à Beaune. Nous avons pris le Menu Découverte et, à nous deux, nous avons pu goûter toutes les options du menu. Le service était très spécial et nous donnait l'impression d'être seuls dans l'établissement malgré la présence de nombreux autres convives. Globalement, hautement recommandé pour un repas délicieux et une présentation exquise des plats."
-                    <div class="review-author">- Dorin T.</div>
-                    <div class="rating-details">★★★★★ | Il y a 4 mois</div>
+                    "L'un des meilleurs restaurants de Beaune. Le menu change constamment et suit les saisons. Leur carte des vins est incroyable et leur sommelier très compétent. Le personnel vous aidera à choisir les meilleurs plats et vins. Le chef était très sympathique, est venu nous saluer et nous expliquer certains plats. Une hospitalité remarquable. L'ambiance est chaleureuse et rustique. Réservation indispensable longtemps à l'avance."
+                    <div class="review-author">- Daniela G.</div>
+                    <div class="rating-details">★★★★★ | Il y a 3 mois</div>
                 </div>
 
                 <div class="review">
-                    "C'était absolument le meilleur repas de ma vie. J'ai mangé dans quatre restaurants étoilés Michelin en France. Tous étaient incroyables. Mais L'Ecusson était dans une classe à part. L'ambiance est moderne, chic, et d'une classe discrète. Le service était fantastique. Chaque assiette était une œuvre d'art. Sérieusement, arrêtez de lire ceci et réservez pour ce repas vraiment spécial et mémorable."
-                    <div class="review-author">- Tyson D.</div>
-                    <div class="rating-details">★★★★★ | Il y a 2 mois</div>
+                    "Excellente cuisine efficace. Tout est bien exécuté. Un menu à 29€ pour le déjeuner avec un choix limité de 2 entrées, 2 plats et 2 desserts. Le dîner est à la carte. Situé dans le centre historique. Vous devez réserver à l'avance car c'est relativement petit et complet chaque jour."
+                    <div class="review-author">- Carine</div>
+                    <div class="rating-details">★★★★★ | Il y a 5 mois</div>
                 </div>
             </div>
 
             <div class="hours">
                 <p>🕒 Horaires :</p>
-                <p>Lundi : Fermé</p>
-                <p>Mardi - Samedi : 12h00-13h30, 19h00-21h00</p>
+                <p>Lundi : 12h00-13h30, 19h15-21h45</p>
+                <p>Mardi : 12h00-13h30</p>
+                <p>Mercredi : Fermé</p>
+                <p>Jeudi - Samedi : 12h00-13h30, 19h15-21h45</p>
                 <p>Dimanche : Fermé</p>
             </div>
         </div>
